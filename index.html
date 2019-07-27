@@ -1,111 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Trivia Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Trivia Game</title>
 </head>
+
 <body>
-    
-<nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="/assets/images/disney-wallpaper.jpg" width="30" height="30" alt="">
-        </a>
-      </nav>
-        <div class="jumbotron">
-                <h1 class="display-4">Disney Trivia Game</h1>
-                <p class="lead">Try your hand at this Disney trivia game and see how many questions you can get correct!</p>
-                <hr class="my-4">
-                <p>Are ya ready kids?! ... Oh wait, that's Nickelodeon</p>
-                
-              </div>
-              <hr>
-              <div class="container">
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">Game
+    </a>
+  </nav>
+  <div class="jumbotron">
+    <h1 class="display-4">Disney Trivia Game</h1>
+    <p class="lead">Try your hand at this Disney trivia game and see how many questions you can get correct!</p>
+    <hr class="my-4">
+    <p>Are ya ready kids?! ... Oh wait, that's Nickelodeon</p>
 
-</div>
+  </div>
+  <hr>
+  <div class="container">
 
-<p id="score"></p>
-<p id="question"></p>
+  </div>
 
-<div id="time-left"></div>
+  <p id="score"></p>
+  <p id="question"></p>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <div id="time-left"></div>
 
-    <script src="assets/javascript/app.js"></script>
-
-
-
-
-
-
-<script>
-              
-              var questions = [
-                { q: "Priness Jasmine is a character in Aladdin", a: "t" },
-                { q: "Simba is played by Jason Weaver in the original Lion King", a: "t" },
-                { q: "Snow White is a priness in Snow White and The 6 Dwarves", a: "f" },
-                { q: "Disney was created and branded by Paul Disney", a: "f" },
-                { q: "Mickey Mouse's original debut year was 1995", a: "f" }
-              ];
-          
-              
-              var score = 0;
-              
-              var questionIndex = 0;
-          
-             
-              function renderQuestion() {
-               
-                if (questionIndex <= (questions.length - 1)) {
-                  document.querySelector("#question").innerHTML = questions[questionIndex].q;
-                }
-              
-                else {
-                  document.querySelector("#question").innerHTML = "Game Over!";
-                  document.querySelector("#score").innerHTML = "Final Score: " + score + " out of " + questions.length;
-                }
-              }
-          
-              function updateScore() {
-                document.querySelector("#score").innerHTML = "Score: " + score;
-              }
-          
-          
-              renderQuestion();
-              updateScore();
-          
-              document.onkeyup = function(event) {
-          
-                if (questionIndex === questions.length) {
-                  return;
-                }
-          
-                var userInput = event.key.toLowerCase();
-          
-                if (userInput === "t" || userInput === "f") {
-          
-                  if (userInput === questions[questionIndex].a) {
-                    alert("Correct!");
-                    score++;
-                    updateScore();
-                  }
-                  else {
-                    alert("Wrong!");
-                  }
-          
-                  questionIndex++;
-                  renderQuestion();
-          
-                }
-          
-              };
-          
-
-
-            </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
 
 </body>
+
 </html>

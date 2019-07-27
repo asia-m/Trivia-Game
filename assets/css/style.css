@@ -1,7 +1,6 @@
 .jumbotron {
     margin-top: 20px;
-    background-image: url(/assets/images/disney-wallpaper.jpg);
+    background-image: url("../images/princess-jas-bg.jpg");
     background-size: cover;
-
 
 }
